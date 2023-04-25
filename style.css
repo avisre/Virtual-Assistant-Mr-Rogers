@@ -1,0 +1,139 @@
+/* contains all the main colors used to styel the page */
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+
+
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=4320&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* custom size to align the background picture perfectly on the x and y axis*/
+    background-size: 100% 120%;
+
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+button {
+    color: #003566;
+    background-color: #caf0f8;
+    border: 1px solid #caf0f8;
+    padding: 0, 0, 3px, 3px;
+    border-radius: 5px;
+}
+.topRow{
+    width: 30vw;
+    height: 73vh;
+    /* use blur effect to get ideal background color; */
+    backdrop-filter: blur(5px);
+    border: 3px solid #caf0f8;
+    border-radius: 1rem;
+display: inline-block;
+
+}
+h2 {
+    width: 30vw;
+    font-family: 'Fasthand', cursive;
+    font-size: 35px;
+    font-weight: 300;
+    color:var(--darkest);
+   
+}
+ 
+
+
+/* task and content class used to style the answers from the user input and delete buttons respectively */
+.task {
+    width: auto;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--darkest);
+    color: var(--light);
+	padding: 0.5rem;
+    font-size: 1.3rem;
+	border-radius: 1rem;
+	margin:1rem 0 1rem 0;
+}
+
+
+
+
+
+.task .content {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+
+
+
+/* responsive design  to maintain aspect ratio across viewports*/
+
+    @media (max-width: 850px) {
+        .topRow{
+            width: 50vw;
+            height: 82vh;
+           
+        
+        }h1{font-size: 2rem;
+            font-weight: 450;
+
+        } .task{
+            font-size: 1.2rem;
+
+        }
+        
+      }
+      @media (max-width: 530px) {
+        .topRow{
+            width: 70vw;
+            height: 80vh;
+           
+        
+        } h1{font-size: 1.5rem;
+            font-weight: 400;
+
+        } .task{
+            font-size: 1.2rem;
+
+        }
+        
+     } @media (max-width: 430px) {
+        h1{font-size: 1.5rem;
+            font-weight: 500;
+
+        }
+        .topRow{
+            width: 60vw;
+            height: 90vh;
+           
+        
+        }
+        .task{
+            font-size: 0.9rem;
+
+        }
+    }
