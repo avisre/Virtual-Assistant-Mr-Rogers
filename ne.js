@@ -39,7 +39,7 @@ function displayTasks() {
 
 // Add new task to the list
 btn.addEventListener('click', () => {
-  if (input.value !== ''&&tasks.length<5) {
+  if (input.value !== ''&&tasks.length<20) {
     tasks.push(input.value);
     localStorage.setItem('tasks', JSON.stringify(tasks));
     displayTasks();
